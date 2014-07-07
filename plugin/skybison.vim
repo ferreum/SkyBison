@@ -2,7 +2,7 @@
 " Maintainer: Daniel Thau (paradigm@bedrocklinux.org)
 " Version: 0.9
 " Description: SkyBison is a Vim plugin used to expedite the use of cmdline.
-" Last Change: 2013-09-18
+" Last Change: 2014-07-07
 " Location: plugin/SkyBison.vim
 " Website: https://github.com/paradigm/skybison
 "
@@ -18,7 +18,7 @@ let g:skybison_loaded = 1
 " Runs command and cleans up to prepare to quit
 function s:RunCommandAndQuit(cmdline)
 	" reset changed settings
-	let &laststatus = s:initlaststatus
+	" let &laststatus = s:initlaststatus
 	let &showmode = s:initshowmode
 	let &shellslash = s:initshellslash
 	let &winheight = s:initwinheight
@@ -64,8 +64,8 @@ function SkyBison(initcmdline)
 
 	" set and save global settings to restore on exit
 	let s:winsizecmd = winrestcmd()
-	let s:initlaststatus = &laststatus
-	let &laststatus = 0
+	" let s:initlaststatus = &laststatus
+	" let &laststatus = 0
 	let s:initshowmode = &showmode
 	let &showmode = 1
 	let s:initshellslash = &shellslash
