@@ -28,10 +28,10 @@ function s:RunCommandAndQuit(cmdline)
 	redraw
 
 	" run command, add to history and quit
+    if a:cmdline != ""
+        call histadd(':', a:cmdline)
+    endif
 	execute a:cmdline
-	if a:cmdline != ""
-		call histadd(':', a:cmdline)
-	endif
 	return 0
 endfunction
 
